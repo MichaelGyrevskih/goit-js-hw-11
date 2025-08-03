@@ -11,10 +11,10 @@ const lightbox = new SimpleLightbox('.gallery a', {
 
 export function createGallery(images) {
   const markup = images.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => `<li class="gallery-item">
-	<a class="gallery-link" href="${webformatURL}">
+	<a class="gallery-link" href="${largeImageURL}">
 		<img
 		  class="gallery-image"
-		  src="${largeImageURL}"
+		  src="${webformatURL }"
 		  alt="${tags}"
 		/>
 	</a>
